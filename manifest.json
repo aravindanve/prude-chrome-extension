@@ -1,0 +1,25 @@
+{
+  "name": "Prude Blocker",
+  "description": "Blocker for chrome",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_title": "Prude Blocker",
+    "default_popup": "index.html",
+    "default_icon": "img/icon.png"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "all_frames": true,
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "css": [],
+      "js": [
+        "js/content-script.js"
+      ]
+    }
+  ]
+}
